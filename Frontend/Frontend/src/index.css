@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+#root{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+h1{
+  margin-bottom: 30px;
+}
+
+h2{
+  margin-top: 25px;
+}
+
+.participant-card{
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+
+.participant-card p{
+  margin: 6px 0;
+}
+
+.participant-card input{
+  width: 70px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.participant-card button{
+  padding: 7px 15px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.divider{
+  margin-top: 30px;
+}
+
+.add-part input{
+  padding: 5px;
+  width: 15rem;
+  margin-right: 5px;
+}
+
+.add-part button{
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
+.login input{
+  padding: 5px;
+  width: 15rem;
+  margin-right: 5px;
+}
+
+.login button{
+  padding: 5px 15px;
+  font-size: 15px;
+}
