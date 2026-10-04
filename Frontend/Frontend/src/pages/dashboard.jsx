@@ -127,7 +127,8 @@ const Dashboard = () => {
 
         alert("Competition reset successfully");
 
-        window.location.reload();
+        setRanking([]);
+        setScore({});
 
     } catch (error) {
         console.log(error);
