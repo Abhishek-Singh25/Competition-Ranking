@@ -111,6 +111,33 @@ const Dashboard = () => {
     }
 };
 
+    const handleReset = async () => {
+    const confirmReset = window.confirm(
+        "Are you sure? This will delete all scores and reset the competition."
+    );
+
+    if (!confirmReset) {
+        return;
+    }
+
+    try {
+        await api.delete("/scores/reset",{
+            headers: {Authorization: `Bearer ${localStorage.getItem("token")}`}
+        });
+
+        alert("Competition reset successfully");
+
+        window.location.reload();
+
+    } catch (error) {
+        console.log(error);
+
+        alert(
+            error.response?.data?.message || "Failed to reset competition"
+        );
+    }
+};
+
     return (<>
         <div>
             <h1>Judge Dashboard</h1>
@@ -203,6 +230,7 @@ const Dashboard = () => {
         </div>
     ))
 )}
+        <button className="reset-btn" onClick={handleReset}>Reset Competition</button>
     </>);
 };
 
