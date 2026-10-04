@@ -59,3 +59,20 @@ export const getScores = async (req, res) => {
         });
     }
 };
+
+export const resetScores = async (req, res) => {
+    try {
+        await db.execute("DELETE FROM round_results");
+
+        res.json({
+            message: "Scores reset successfully"
+        });
+
+    } catch (error) {
+        console.log(error);
+
+        res.status(500).json({
+            message: "Server error"
+        });
+    }
+};
