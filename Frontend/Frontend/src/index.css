@@ -75,3 +75,9 @@ h2{
   padding: 5px 15px;
   font-size: 15px;
 }
+
+.reset-btn{
+  padding: 4px 24px;
+  font-size: 17px;
+  cursor: pointer;
+}
